@@ -58,7 +58,6 @@ void print_menu(void)
 int get_algo(int num) {
 	for(int i = 0; algos[i].name; i++)
 		if(algos[i].id == num) return i;
-
 	return -1;
 }
 
@@ -77,8 +76,7 @@ void print_algo(int algo) {
 		exit(EXIT_FAILURE);
 	}
 	
-	clear(); // clearing screen with escape character sequence 
-	printf("Code for bubble sort: \n\n");
+	clear();
 
 	while((c = fgetc(fp)) != EOF) { // reading the file fp with fgetc, man fgetc for more detail about the function
 		printf("%c", c);
@@ -86,7 +84,7 @@ void print_algo(int algo) {
 				
 	fclose(fp); // closing the file pointer after using
 }
-	
+
 void main()
 {
 	int choice, c;
@@ -136,6 +134,7 @@ void main()
 			//Radix Sort
 			case 6:
 				print_algo(6);
+				break;
 
 			default:
 				fprintf(stderr, "Invalid Input\n");
