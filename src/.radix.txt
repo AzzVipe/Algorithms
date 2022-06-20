@@ -41,23 +41,3 @@ void radixsort(int array[], int size) {
   for (int place = 1; max / place > 0; place *= 10)
     countingSort(array, size, place);
 }
-
-void printArray(int array[], int size) {
-  for (int i = 0; i < size; ++i) {
-    printf("%d  ", array[i]);
-  }
-  printf("\n");
-}
-
-int main() {
-  int array[] = {121, 432, 564, 23, 1, 45, 788};
-  int size = sizeof(array) / sizeof(array[0]);
-
-  printf("Array before sorting: \n");
-  printArray(array, size);
-
-  radixsort(array, size);
-
-  printf("Array after sorting: \n");
-  printArray(array, size);
-}
