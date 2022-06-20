@@ -1,12 +1,5 @@
 #include <stdio.h>
 
-void printArray(int array[], int size) {
-  for (int i = 0; i < size; i++) {
-    printf("%d ", array[i]);
-  }
-  printf("\n");
-}
-
 void insertionSort(int array[], int size) {
   for (int step = 1; step < size; step++) {
     int key = array[step];
@@ -17,17 +10,4 @@ void insertionSort(int array[], int size) {
     }
     array[j + 1] = key;
   }
-}
-
-int main() {
-  int array[] = {9, 5, 1, 4, 3};
-  int size = sizeof(array) / sizeof(array[0]);
-
-  printf("Array before sorting: \n");
-  printArray(array, size);
-
-  insertionSort(array, size);
-
-  printf("Sorted array in ascending order: \n");
-  printArray(array, size);
 }
